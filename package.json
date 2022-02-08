@@ -11,7 +11,7 @@
     "@blueprintjs/core": "^4.0.0-beta.12",
     "@blueprintjs/popover2": "1.0.0-beta.12",
     "gamerbot-types": "2.0.0-3",
-    "next": "12.0.7",
+    "next": "12.0.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-markdown": "^8.0.0",
