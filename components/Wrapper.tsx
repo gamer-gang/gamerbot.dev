@@ -14,7 +14,7 @@ const Wrapper: React.FC<WrapperProps> = ({
   ...props
 }) => {
   return (
-    <div className={`max-w-[1200px] mx-auto ${className ?? ''}`} {...props}>
+    <div className={`max-w-[1050px] mx-auto ${className ?? ''}`} {...props}>
       <div className={`${childClassName ?? ''} ${page ? 'mx-4 mt-5' : 'mx-4'}`}>{children}</div>
     </div>
   )

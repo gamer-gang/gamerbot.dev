@@ -1,4 +1,5 @@
 import { H2, H3, HTMLDivProps, Tag, Text } from '@blueprintjs/core'
+import Image from 'next/image'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { DocsJson } from 'src/types'
@@ -13,11 +14,16 @@ const CommandEntry: React.VFC<CommandEntryProps> = ({ command, ...props }) => {
   return (
     <div {...props}>
       <div className="flex items-center scroll-m-24" id={`command-${command.name}`}>
-        <H2 className={command.type !== 'CHAT_INPUT' ? 'mr-3' : ''}>/{command.name}</H2>
-        {command.type !== 'CHAT_INPUT' && (
-          <Tag round className="mb-2 tracking-wider">
-            {command.type} CTX MENU
-          </Tag>
+        {command.type === 'CHAT_INPUT' ? (
+          <H2 className="mb-4">/{command.name}</H2>
+        ) : (
+          <H2 className="flex items-center mb-4">
+            <Image src="/gamerbot.svg" width={32} height={32} className="rounded-full" />
+            <span className="ml-2 mr-4">{command.name}</span>
+            <Tag round className="mt-1 font-normal tracking-wider">
+              {command.type} CTX MENU
+            </Tag>
+          </H2>
         )}
       </div>
       <ReactMarkdown className="mb-1">{command.longDescription}</ReactMarkdown>

@@ -6,7 +6,7 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head />
-        <body className={`bg-darkgray-3 ${Classes.DARK}`}>
+        <body className={`bg-darkgray-3 ${Classes.DARK} font-sans`}>
           <Main />
           <NextScript />
         </body>
