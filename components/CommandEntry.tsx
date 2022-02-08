@@ -29,15 +29,10 @@ const CommandEntry: React.VFC<CommandEntryProps> = ({ command, ...props }) => {
       <ReactMarkdown className="mb-1">{command.longDescription}</ReactMarkdown>
       {command.guildOnly && <Text className="mb-1">✅ Servers only</Text>}
       {command.logUsage && <Text className="mb-1">✅ Usage logged</Text>}
-      {command.options.length > 0 && (
-        <>
-          <H3 className="mt-4">Options</H3>
-          <CommandOptionTable options={command.options} />
-        </>
-      )}
+      {command.options.length > 0 && <CommandOptionTable command={command} />}
       {command.examples.length > 0 && (
         <>
-          <H3 className="mt-4">Examples</H3>
+          <H3 className="mt-8">Examples</H3>
           {command.examples.map((example, i) => (
             <CommandExample key={i} name={command.name} example={example} className="mb-3" />
           ))}

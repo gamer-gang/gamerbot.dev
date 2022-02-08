@@ -15,7 +15,7 @@ const CommandExample: React.VFC<CommandExamplesProps> = ({
 }) => {
   return (
     <div {...props}>
-      <span className="flex items-center mb-2 font-[Whitney] text-lg">
+      <span className="flex flex-wrap items-center mb-2 font-[Whitney] text-lg">
         <span className="mr-2">/{name}</span>
         {Object.entries(options).map(([key, value], i) => {
           let valueElement
@@ -36,14 +36,14 @@ const CommandExample: React.VFC<CommandExamplesProps> = ({
           }
 
           return (
-            <React.Fragment key={i}>
+            <div className="flex items-center h-full" key={i}>
               {value != null ? (
                 <span className="h-full px-1 mr-0.5 rounded bg-darkgray-2">{key}:</span>
               ) : (
                 <span className="h-full mr-0.5">{key}</span>
               )}
               {valueElement}
-            </React.Fragment>
+            </div>
           )
         })}
       </span>

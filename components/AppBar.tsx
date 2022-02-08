@@ -25,7 +25,7 @@ const AppBar: React.VFC = () => {
   }, [])
 
   return (
-    <Navbar className="!shadow-none sticky top-0">
+    <Navbar className="!shadow-none sticky top-0 tracking-wide">
       <Wrapper className="mx-auto">
         <Navbar.Group align="left" className="flex items-center">
           <Image
