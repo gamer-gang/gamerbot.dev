@@ -17,7 +17,7 @@ names.forEach((name) => {
     const key = `${name}${i}`
     o[i] = Colors[key]
   }
-  blueprintColors[name.toLowerCase().replaceAll('_', '')] = o
+  blueprintColors[name.toLowerCase().replace(/_/g, '')] = o
 })
 
 module.exports = {
