@@ -17,6 +17,10 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>gamerbot</title>
+        <meta
+          name="description"
+          content="A general-purpose, open-source Discord bot built with Node.js + TypeScript"
+        />
         <meta name="og:title" content="gamerbot" />
         <meta
           name="og:description"

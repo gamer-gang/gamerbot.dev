@@ -30,11 +30,15 @@ const Commands: NextPage<CommandsProps> = ({ data }) => {
   return (
     <>
       <Head>
-        <title>Commands | gamerbot</title>
+        <title>gamerbot - Commands</title>
+        <meta
+          name="description"
+          content="A general-purpose, open-source Discord bot built with Node.js + TypeScript - Commands reference"
+        />
         <meta name="og:title" content="gamerbot - Commands" />
         <meta
           name="og:description"
-          content="A general-purpose, open-source Discord bot built with Node.js + TypeScript"
+          content="A general-purpose, open-source Discord bot built with Node.js + TypeScript - Commands reference"
         />
         <meta name="og:image" content={`${PUBLIC_URL}/gamerbot.png`} />
         <meta name="og:url" content={`${PUBLIC_URL}/commands`} />

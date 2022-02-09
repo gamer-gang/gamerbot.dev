@@ -13,6 +13,8 @@ const Invite: NextPage = () => {
   return (
     <>
       <Head>
+        <title>gamerbot - Invite</title>
+        <meta name="description" content="Invite gamerbot to your server" />
         <meta name="og:title" content="gamerbot - Invite" />
         <meta name="og:description" content="Invite gamerbot to your server" />
         <meta name="og:image" content={`${PUBLIC_URL}/gamerbot.png`} />
