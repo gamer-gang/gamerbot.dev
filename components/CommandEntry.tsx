@@ -29,6 +29,20 @@ const CommandEntry: React.VFC<CommandEntryProps> = ({ command, ...props }) => {
       <ReactMarkdown className="mb-1">{command.longDescription}</ReactMarkdown>
       {command.guildOnly && <Text className="mb-1">✅ Servers only</Text>}
       {command.logUsage && <Text className="mb-1">✅ Usage logged</Text>}
+      {command.userPermissions.length > 0 && (
+        <ReactMarkdown className="mb-1">
+          {`**User permissions required**: ${command.userPermissions
+            .map((p) => `\`${p}\``)
+            .join(', ')}`}
+        </ReactMarkdown>
+      )}
+      {command.botPermissions.length > 0 && (
+        <ReactMarkdown className="mb-1">
+          {`**Bot permissions required**: ${command.botPermissions
+            .map((p) => `\`${p}\``)
+            .join(', ')}`}
+        </ReactMarkdown>
+      )}
       {command.options.length > 0 && <CommandOptionTable command={command} />}
       {command.examples.length > 0 && (
         <>
