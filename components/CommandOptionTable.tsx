@@ -40,7 +40,11 @@ const CommandOptionTable: React.VFC<CommandOptionTableProps> = ({ command: { opt
       </>
     )
   }
-  const elements: JSX.Element[] = [<H3 className="mt-8">Subcommands</H3>]
+  const elements: JSX.Element[] = [
+    <H3 className="mt-8" key="scheader">
+      Subcommands
+    </H3>,
+  ]
 
   for (const subcommand of options) {
     assert(subcommand.type === 'SUB_COMMAND')

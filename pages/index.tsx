@@ -14,6 +14,14 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>gamerbot</title>
+        <meta name="og:title" content="gamerbot" />
+        <meta
+          name="og:description"
+          content="A general-purpose, open-source Discord bot built with Node.js + TypeScript"
+        />
+        <meta name="og:image" content={`${process.env.PUBLIC_URL}/gamerbot.png`} />
+        <meta name="og:url" content={process.env.PUBLIC_URL} />
+        <meta name="og:type" content="website" />
       </Head>
       <AppBar />
       <ActionBar />
