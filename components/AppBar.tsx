@@ -8,8 +8,9 @@ import Wrapper from './Wrapper'
 let cachedVersion = 'latest'
 
 const AppBar: React.VFC = () => {
-  const [version, setVersion] = React.useState(cachedVersion)
   const router = useRouter()
+  const [version, setVersion] = React.useState(cachedVersion)
+  const [inviteLoading, setInviteLoading] = React.useState(false)
 
   useEffect(() => {
     if (version !== 'latest') return
@@ -42,9 +43,11 @@ const AppBar: React.VFC = () => {
         </Navbar.Group>
         <Navbar.Group align="right">
           <Button
+            loading={inviteLoading}
             rightIcon="share"
             intent="primary"
             onClick={() => {
+              setInviteLoading(true)
               void router.push('/invite')
             }}
           >

@@ -10,6 +10,8 @@ import Wrapper from '../components/Wrapper'
 
 const Home: NextPage = () => {
   const router = useRouter()
+  const [inviteLoading, setInviteLoading] = React.useState(false)
+
   return (
     <>
       <Head>
@@ -31,11 +33,13 @@ const Home: NextPage = () => {
 
           <div className="flex mb-4">
             <Button
+              loading={inviteLoading}
               className="mr-4"
               rightIcon="share"
               intent="primary"
               large
               onClick={() => {
+                setInviteLoading(true)
                 void router.push('/invite')
               }}
             >
