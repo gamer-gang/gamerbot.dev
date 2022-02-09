@@ -18,7 +18,13 @@ const CommandEntry: React.VFC<CommandEntryProps> = ({ command, ...props }) => {
           <H2 className="mb-4">/{command.name}</H2>
         ) : (
           <H2 className="flex items-center mb-4">
-            <Image src="/gamerbot.svg" width={32} height={32} className="rounded-full" />
+            <Image
+              src="/gamerbot.svg"
+              width={32}
+              height={32}
+              className="rounded-full"
+              alt="gamerbot logo"
+            />
             <span className="ml-2 mr-4">{command.name}</span>
             <Tag round className="mt-1 font-normal tracking-wider">
               {command.type} CTX MENU

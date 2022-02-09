@@ -34,7 +34,7 @@ const Home: NextPage = () => {
       <ActionBar />
       <Wrapper page>
         <Hero appBar actionBar>
-          <H1 className="mb-4 font-medium">gamerbot</H1>
+          <H1 className="mb-4 font-semibold">gamerbot</H1>
 
           <div className="flex mb-4">
             <Button
