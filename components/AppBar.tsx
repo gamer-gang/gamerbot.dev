@@ -1,19 +1,19 @@
-import { Button, Navbar, Tag } from '@blueprintjs/core'
+import { Button, Classes, Navbar, Tag } from '@blueprintjs/core'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { DOCS_BASE } from '../util/constants'
 import Wrapper from './Wrapper'
 
-let cachedVersion = 'latest'
+let cachedVersion: string | undefined = undefined
 
 const AppBar: React.VFC = () => {
   const router = useRouter()
-  const [version, setVersion] = React.useState(cachedVersion)
+  const [version, setVersion] = React.useState<string | undefined>(undefined)
   const [inviteLoading, setInviteLoading] = React.useState(false)
 
   useEffect(() => {
-    if (version !== 'latest') return
+    if (version) return
 
     const fetchVersion = async (): Promise<void> => {
       const latest = await fetch(`${DOCS_BASE}/latest.json`)
@@ -37,8 +37,8 @@ const AppBar: React.VFC = () => {
             alt="gamerbot logo"
           />
           <Navbar.Heading className="mb-0 ml-2 text-lg font-semibold">gamerbot</Navbar.Heading>
-          <Tag intent="primary" round minimal>
-            {version}
+          <Tag intent="primary" round minimal className={!version ? Classes.SKELETON : ''}>
+            {version ?? 'latest'}
           </Tag>
         </Navbar.Group>
         <Navbar.Group align="right">
