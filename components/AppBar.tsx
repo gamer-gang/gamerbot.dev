@@ -42,7 +42,7 @@ const AppBar: React.VFC = () => {
         </Navbar.Group>
         <Navbar.Group align="right">
           <Button
-            icon="share"
+            rightIcon="share"
             intent="primary"
             onClick={() => {
               void router.push('/invite')

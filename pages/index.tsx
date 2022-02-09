@@ -1,4 +1,4 @@
-import { Button, H1 } from '@blueprintjs/core'
+import { AnchorButton, Button, H1 } from '@blueprintjs/core'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -29,10 +29,10 @@ const Home: NextPage = () => {
         <Hero appBar actionBar>
           <H1 className="mb-4 font-medium">gamerbot</H1>
 
-          <div className="flex">
+          <div className="flex mb-4">
             <Button
               className="mr-4"
-              icon="share"
+              rightIcon="share"
               intent="primary"
               large
               onClick={() => {
@@ -54,6 +54,17 @@ const Home: NextPage = () => {
               Commands
             </Button>
           </div>
+          <AnchorButton
+            intent="primary"
+            icon="git-branch"
+            outlined
+            large
+            href={process.env.REPO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Repository
+          </AnchorButton>
         </Hero>
       </Wrapper>
       <footer></footer>

@@ -1,5 +1,5 @@
 /* eslint-disable no-void */
-import { Button, Navbar } from '@blueprintjs/core'
+import { AnchorButton, Button, Navbar } from '@blueprintjs/core'
 import { useRouter } from 'next/router'
 import React from 'react'
 import Wrapper from './Wrapper'
@@ -24,6 +24,16 @@ const ActionBar: React.VFC = () => {
         >
           Commands
         </Button>
+        <AnchorButton
+          minimal
+          className="py-0"
+          rightIcon="share"
+          href={process.env.REPO_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </AnchorButton>
       </Wrapper>
     </Navbar>
   )
