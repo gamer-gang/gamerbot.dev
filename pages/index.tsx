@@ -7,6 +7,7 @@ import ActionBar from '../components/ActionBar'
 import AppBar from '../components/AppBar'
 import Hero from '../components/Hero'
 import Wrapper from '../components/Wrapper'
+import { PUBLIC_URL, REPO_URL } from '../util/constants'
 
 const Home: NextPage = () => {
   const router = useRouter()
@@ -21,8 +22,8 @@ const Home: NextPage = () => {
           name="og:description"
           content="A general-purpose, open-source Discord bot built with Node.js + TypeScript"
         />
-        <meta name="og:image" content={`${process.env.PUBLIC_URL}/gamerbot.png`} />
-        <meta name="og:url" content={process.env.PUBLIC_URL} />
+        <meta name="og:image" content={`${PUBLIC_URL}/gamerbot.png`} />
+        <meta name="og:url" content={PUBLIC_URL} />
         <meta name="og:type" content="website" />
       </Head>
       <AppBar />
@@ -63,7 +64,7 @@ const Home: NextPage = () => {
             icon="git-branch"
             outlined
             large
-            href={process.env.REPO_URL}
+            href={REPO_URL}
             target="_blank"
             rel="noopener noreferrer"
           >

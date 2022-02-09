@@ -2,6 +2,7 @@
 import { AnchorButton, Button, Navbar } from '@blueprintjs/core'
 import { useRouter } from 'next/router'
 import React from 'react'
+import { REPO_URL } from '../util/constants'
 import Wrapper from './Wrapper'
 
 const ActionBar: React.VFC = () => {
@@ -28,7 +29,7 @@ const ActionBar: React.VFC = () => {
           minimal
           className="py-0"
           rightIcon="share"
-          href={process.env.REPO_URL}
+          href={REPO_URL}
           target="_blank"
           rel="noopener noreferrer"
         >

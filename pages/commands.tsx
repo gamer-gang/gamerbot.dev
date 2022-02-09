@@ -8,7 +8,7 @@ import ActionBar from '../components/ActionBar'
 import AppBar from '../components/AppBar'
 import CommandEntry from '../components/CommandEntry'
 import Wrapper from '../components/Wrapper'
-import { DOCS_BASE } from '../util/constants'
+import { DOCS_BASE, PUBLIC_URL } from '../util/constants'
 
 interface CommandsProps {
   data: DocsJson
@@ -36,8 +36,8 @@ const Commands: NextPage<CommandsProps> = ({ data }) => {
           name="og:description"
           content="A general-purpose, open-source Discord bot built with Node.js + TypeScript"
         />
-        <meta name="og:image" content={`${process.env.PUBLIC_URL}/gamerbot.png`} />
-        <meta name="og:url" content={`${process.env.PUBLIC_URL}/commands`} />
+        <meta name="og:image" content={`${PUBLIC_URL}/gamerbot.png`} />
+        <meta name="og:url" content={`${PUBLIC_URL}/commands`} />
         <meta name="og:type" content="website" />
       </Head>
       <AppBar />
