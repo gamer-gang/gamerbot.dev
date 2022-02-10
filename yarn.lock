@@ -2377,6 +2377,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gamerbot.dev@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "gamerbot.dev@workspace:."
+  dependencies:
+    "@blueprintjs/core": ^4.0.0-beta.12
+    "@blueprintjs/popover2": 1.0.0-beta.12
+    "@types/node": ^17.0.16
+    "@types/react": ^17.0.39
+    "@wiisportsresorts/eslint-config": ^1.0.0-1
+    discord.js: ^13.6.0
+    dotenv: ^16.0.0
+    eslint: 8.8.0
+    eslint-config-next: 12.0.10
+    gamerbot-types: 2.0.0-3
+    next: 12.0.10
+    postcss-flexbugs-fixes: ^5.0.2
+    postcss-preset-env: ^7.3.1
+    react: 17.0.2
+    react-dom: 17.0.2
+    react-markdown: ^8.0.0
+    sass: ^1.49.7
+    swr: ^1.2.1
+    tailwindcss: ^3.0.19
+    typescript: 4.5.5
+  languageName: unknown
+  linkType: soft
+
 "gauge@npm:^4.0.0":
   version: 4.0.0
   resolution: "gauge@npm:4.0.0"
@@ -5131,33 +5158,6 @@ __metadata:
   checksum: a04c07bb9e2d8f46776517d4618f2406fb977a74d914ad98b264fc3db0fe8224da5bec11e5f8902c5b9bcb8ace22d95fbe3c7b36b8593b7dfc8391a25898f32f
   languageName: node
   linkType: hard
-
-"teavend@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "teavend@workspace:."
-  dependencies:
-    "@blueprintjs/core": ^4.0.0-beta.12
-    "@blueprintjs/popover2": 1.0.0-beta.12
-    "@types/node": ^17.0.16
-    "@types/react": ^17.0.39
-    "@wiisportsresorts/eslint-config": ^1.0.0-1
-    discord.js: ^13.6.0
-    dotenv: ^16.0.0
-    eslint: 8.8.0
-    eslint-config-next: 12.0.10
-    gamerbot-types: 2.0.0-3
-    next: 12.0.10
-    postcss-flexbugs-fixes: ^5.0.2
-    postcss-preset-env: ^7.3.1
-    react: 17.0.2
-    react-dom: 17.0.2
-    react-markdown: ^8.0.0
-    sass: ^1.49.7
-    swr: ^1.2.1
-    tailwindcss: ^3.0.19
-    typescript: 4.5.5
-  languageName: unknown
-  linkType: soft
 
 "text-table@npm:^0.2.0":
   version: 0.2.0
