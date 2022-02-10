@@ -15,6 +15,11 @@ const AppBar: React.VFC = () => {
   useEffect(() => {
     if (version) return
 
+    if (cachedVersion) {
+      setVersion(cachedVersion)
+      return
+    }
+
     const fetchVersion = async (): Promise<void> => {
       const latest = await fetch(`${DOCS_BASE}/latest.json`)
       cachedVersion = 'v' + (await latest.text()).replace(/\.json$/, '')
