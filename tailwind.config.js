@@ -38,12 +38,12 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
+          'Roboto',
           'Inter var',
           'Inter',
           '-apple-system',
           'BlinkMacSystemFont',
           'Segoe UI',
-          'Roboto',
           'Helvetica Neue',
           'Arial',
           'Noto Sans',
