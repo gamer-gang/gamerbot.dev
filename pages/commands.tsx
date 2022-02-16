@@ -68,7 +68,7 @@ const Commands: NextPage<CommandsProps> = ({ data }) => {
         <hr className="my-8 border-gray-1" />
         {commands.map((command, i) => (
           <React.Fragment key={i}>
-            <CommandEntry command={command} className="mb-8" />
+            <CommandEntry version={data.version} command={command} className="mb-8" />
             {i !== commands.length - 1 && <hr className="my-8 border-gray-1" />}
           </React.Fragment>
         ))}

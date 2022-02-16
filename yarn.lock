@@ -2370,10 +2370,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gamerbot-types@npm:2.0.0-3":
-  version: 2.0.0-3
-  resolution: "gamerbot-types@npm:2.0.0-3"
-  checksum: d6eef55931cdc6789e3807982108b7dbb613192edfc6b15839417571c0b5776b2de282d94d1c046173030f1e21ec93d64f874a70cd39cd2f1b8400548215cdcb
+"gamerbot-types@npm:2.2.1":
+  version: 2.2.1
+  resolution: "gamerbot-types@npm:2.2.1"
+  checksum: dd6f82adf14048ff4792b761baf68a2bb2f66549b6e884159cfe024f932050186ed1b63598c1feb6a98582bbb070b99650547eca6f173be8c887b019578570d8
   languageName: node
   linkType: hard
 
@@ -2390,7 +2390,7 @@ __metadata:
     dotenv: ^16.0.0
     eslint: 8.8.0
     eslint-config-next: 12.0.10
-    gamerbot-types: 2.0.0-3
+    gamerbot-types: 2.2.1
     next: 12.0.10
     postcss-flexbugs-fixes: ^5.0.2
     postcss-preset-env: ^7.3.1
