@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { H3, H4, HTMLTable } from '@blueprintjs/core'
 import assert from 'assert'
+import { DocsJson } from 'gamerbot/src/types'
 import React from 'react'
-import { DocsJson } from 'src/types'
 
 interface CommandOptionTableProps {
   command: DocsJson['commands'][number]

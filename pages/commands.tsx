@@ -1,9 +1,9 @@
 /// <reference types="gamerbot-types" />
 import { H1, Tag } from '@blueprintjs/core'
+import type { DocsJson } from 'gamerbot/src/types'
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import type { DocsJson } from 'src/types'
 import ActionBar from '../components/ActionBar'
 import AppBar from '../components/AppBar'
 import CommandEntry from '../components/CommandEntry'

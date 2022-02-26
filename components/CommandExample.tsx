@@ -1,7 +1,7 @@
 import { HTMLDivProps } from '@blueprintjs/core'
+import { DocsJson } from 'gamerbot/src/types'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { DocsJson } from 'src/types'
 
 interface CommandExamplesProps extends HTMLDivProps {
   name: string
