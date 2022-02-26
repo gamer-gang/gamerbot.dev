@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import { DOCS_BASE } from '../util/constants'
 import Wrapper from './Wrapper'
 
-let cachedVersion: string | undefined = undefined
+let cachedVersion: string | undefined
 
 const AppBar: React.VFC = () => {
   const router = useRouter()
