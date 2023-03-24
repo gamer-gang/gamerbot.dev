@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { REPO_URL } from '../util/constants'
+import { applicationCommandTypeName } from '../util/discord'
 import CommandExample from './CommandExample'
 import CommandOptionTable from './CommandOptionTable'
 
@@ -19,7 +20,7 @@ const CommandEntry: React.VFC<CommandEntryProps> = ({ version, command, ...props
         className="flex items-center justify-between w-full mb-4 scroll-m-24"
         id={`command-${command.name}`}
       >
-        {command.type === 'CHAT_INPUT' ? (
+        {applicationCommandTypeName[command.type] === 'CHAT_INPUT' ? (
           <H2 className="mb-0">/{command.name}</H2>
         ) : (
           <H2 className="flex items-center mb-0">
@@ -32,7 +33,7 @@ const CommandEntry: React.VFC<CommandEntryProps> = ({ version, command, ...props
             />
             <span className="ml-2 mr-4">{command.name}</span>
             <Tag round className="mt-1 font-normal tracking-wider">
-              {command.type} CTX MENU
+              {applicationCommandTypeName[command.type]} CTX MENU
             </Tag>
           </H2>
         )}

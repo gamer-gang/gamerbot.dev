@@ -1,8 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { H3, H4, HTMLTable } from '@blueprintjs/core'
 import assert from 'assert'
+import type { ApplicationCommandSubCommandData } from 'discord.js'
 import { DocsJson } from 'gamerbot/src/types'
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
+import { applicationCommandOptionTypeName } from '../util/discord'
 
 interface CommandOptionTableProps {
   command: DocsJson['commands'][number]
@@ -22,7 +25,7 @@ const Table: React.VFC<{ options: DocsJson['commands'][number]['options'] }> = (
       {options.map((option, i) => (
         <tr key={i}>
           <td>{option.name}</td>
-          <td>{option.type.toString().replace(/_/g, '').toLowerCase()}</td>
+          <td>{applicationCommandOptionTypeName[option.type].replace(/_/g, '').toLowerCase()}</td>
           <td>{(option as any).required ? '✅' : '❌'}</td>
           <td>{option.description}</td>
         </tr>
@@ -32,7 +35,7 @@ const Table: React.VFC<{ options: DocsJson['commands'][number]['options'] }> = (
 )
 
 const CommandOptionTable: React.VFC<CommandOptionTableProps> = ({ command: { options, name } }) => {
-  if (options[0].type !== 'SUB_COMMAND') {
+  if (applicationCommandOptionTypeName[options[0].type] !== 'SUBCOMMAND') {
     return (
       <>
         <H3 className="mt-8">Options</H3>
@@ -47,16 +50,23 @@ const CommandOptionTable: React.VFC<CommandOptionTableProps> = ({ command: { opt
   ]
 
   for (const subcommand of options) {
-    assert(subcommand.type === 'SUB_COMMAND')
+    assert(applicationCommandOptionTypeName[options[0].type] === 'SUBCOMMAND')
 
     elements.push(
-      <H4 key={subcommand.name + 'header'} className="mt-4 mb-0">
+      <H4 key={subcommand.name + 'header'} className="mt-4 mb-2">
         /{name} {subcommand.name}
       </H4>
     )
 
-    if (subcommand.options?.length) {
-      elements.push(<Table key={subcommand.name} options={subcommand.options} />)
+    elements.push(<ReactMarkdown>{subcommand.description}</ReactMarkdown>)
+
+    if ((subcommand as ApplicationCommandSubCommandData).options?.length) {
+      elements.push(
+        <Table
+          key={subcommand.name}
+          options={(subcommand as ApplicationCommandSubCommandData).options!}
+        />
+      )
     }
   }
 

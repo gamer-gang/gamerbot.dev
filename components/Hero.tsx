@@ -1,12 +1,12 @@
-import React from 'react'
+import { PropsWithChildren } from 'react'
 import styles from '../styles/util.module.scss'
 
-interface HeroProps {
+interface HeroProps extends PropsWithChildren {
   appBar?: boolean
   actionBar?: boolean
 }
 
-const Hero: React.FC<HeroProps> = ({ appBar = false, actionBar = false, children }) => {
+const Hero = ({ appBar = false, actionBar = false, children }: HeroProps): JSX.Element => {
   return (
     <section
       className={`flex flex-col items-center justify-center w-full ${styles.hero} -mt-4 ${

@@ -9,6 +9,7 @@ import AppBar from '../components/AppBar'
 import CommandEntry from '../components/CommandEntry'
 import Wrapper from '../components/Wrapper'
 import { DOCS_BASE, PUBLIC_URL } from '../util/constants'
+import { applicationCommandTypeName } from '../util/discord'
 
 interface CommandsProps {
   data: DocsJson
@@ -52,12 +53,12 @@ const Commands: NextPage<CommandsProps> = ({ data }) => {
         <div className="flex flex-wrap items-center justify-center max-w-3xl mx-auto mb-8">
           {commands.map((command, i) => (
             <a key={i} href={`#command-${command.name}`} className="inline-flex items-center mr-4">
-              {command.type === 'CHAT_INPUT' ? (
+              {applicationCommandTypeName[command.type] === 'CHAT_INPUT' ? (
                 `/${command.name}`
               ) : (
                 <>
                   <Tag minimal round className="mr-1">
-                    {command.type[0]}
+                    {applicationCommandTypeName[command.type].slice(0, 1)}
                   </Tag>
                   {command.name}
                 </>
